@@ -77,4 +77,4 @@ class Model_KPI():
         self.accuracy = pd.DataFrame({'risk':threshold_list, model_name : accuracy_list})
         self.TNR = pd.DataFrame({'risk':threshold_list, model_name : TNR_list})
         self.TPR = pd.DataFrame({'risk':threshold_list, model_name : TPR_list})
-        self.AUC = compute_AUC(model,X_test,Y_test)
+        self.AUC = self.compute_AUC(model,X_test,Y_test)
